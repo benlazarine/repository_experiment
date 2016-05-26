@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "Download started"
-wget -o https://bitbucket.org/leeatuw/repository_experiment/raw/master/sayhi.sh
+curl -o https://bitbucket.org/leeatuw/repository_experiment/raw/master/sayhi.sh
 echo "Download ended"
 echo "shell started"
 chmod +x sayhi.sh
