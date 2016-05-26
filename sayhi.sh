@@ -6,22 +6,22 @@ echo "Done download: MCR-v717.zip"
 ################################################################################################################
 ################################################################################################################
 echo "Start download: iPlant_ver0"
-wget https://bitbucket.org/leeatuw/repository_experiment/raw/master/iPlant_ver0
+wget -O iPlant_ver0 https://bitbucket.org/leeatuw/repository_experiment/raw/master/iPlant_ver0
 echo "Done download: iPlant_ver0"
 ################################################################################################################
 ################################################################################################################
 echo "Start download: phytoG"
-wget https://bitbucket.org/leeatuw/repository_experiment/raw/master/phytoG
+wget -O phytoG https://bitbucket.org/leeatuw/repository_experiment/raw/master/phytoG
 echo "Done download: phytoG"
 ################################################################################################################
 ################################################################################################################
 echo "Start download: launch.sh"
-wget https://bitbucket.org/leeatuw/repository_experiment/raw/master/launch.sh
+wget -O launch.sh https://bitbucket.org/leeatuw/repository_experiment/raw/master/launch.sh
 echo "Done download: launch.sh"
 ################################################################################################################
 ################################################################################################################
 echo "Start download: run_phytoG.sh "
-wget https://bitbucket.org/leeatuw/repository_experiment/raw/master/run_phytoG.sh 
+wget -O run_phytoG.sh https://bitbucket.org/leeatuw/repository_experiment/raw/master/run_phytoG.sh 
 echo "Done download: run_phytoG.sh "
 ################################################################################################################
 ################################################################################################################
