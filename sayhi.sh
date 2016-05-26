@@ -26,7 +26,8 @@ echo "Done download: run_phytoG.sh "
 ################################################################################################################
 ################################################################################################################
 echo "start unzip: vv717.zip"
-unzip -q v717.zip
+mkdir -p /opt/imagePhenomics/common/MATLAB/MATLAB_Compiler_Runtime_R2012a/
+unzip -q v717.zip -C /opt/imagePhenomics/common/MATLAB/MATLAB_Compiler_Runtime_R2012a/
 echo "Done unzip: vv717.zip"
 ################################################################################################################
 ################################################################################################################
@@ -37,5 +38,5 @@ echo "Done export: vv717.zip"
 ################################################################################################################
 echo "Start run: shell for compile"
 mkdir -p $MCR_CACHE_ROOT
-./run_singleSeedlingImage.sh "MATLAB_Compiler_Runtime/v840/"
+./launch.sh
 echo "Done run: shell for compile"
