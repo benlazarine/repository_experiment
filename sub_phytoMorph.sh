@@ -34,7 +34,7 @@ echo "Done download: run_phytoG.sh "
 echo "start unzip: v717.zip"
 mkdir -p /opt/imagePhenomics/common/MATLAB/MATLAB_Compiler_Runtime_R2012a/
 #unzip /opt/imagePhenomics/common/v717.zip -C /opt/imagePhenomics/common/MATLAB/MATLAB_Compiler_Runtime_R2012a/
-sudo unzip /opt/imagePhenomics/common/v717.zip -d /opt/imagePhenomics/common/MATLAB/MATLAB_Compiler_Runtime_R2012a/
+sudo unzip -q /opt/imagePhenomics/common/v717.zip -d /opt/imagePhenomics/common/MATLAB/MATLAB_Compiler_Runtime_R2012a/
 echo "Done unzip: v717.zip"
 ################################################################################################################
 ################################################################################################################
