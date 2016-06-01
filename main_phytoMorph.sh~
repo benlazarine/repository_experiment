@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "Download started"
-wget https://bitbucket.org/leeatuw/repository_experiment/raw/master/sayhi.sh
+wget https://bitbucket.org/leeatuw/repository_experiment/raw/master/sub_phytoMorph.sh
 echo "Download ended"
 echo "shell started"
-./sayhi.sh
+./sub_phytoMorph.sh
 echo "shell ended"
 
