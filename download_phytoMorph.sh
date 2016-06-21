@@ -34,7 +34,7 @@ echo "Done download: run_$2.sh "
 ################################################################################################################
 ################################################################################################################
 wget -O icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
-sudo tar xjf -o -q icommands.x86_64.tar.bz2 -C /usr/sbin/
+sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
 
 wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
 sudo chmod +x irodsFs
