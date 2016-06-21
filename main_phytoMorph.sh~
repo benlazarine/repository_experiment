@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 echo "Which program do you want to configure or EXIT?"
 select selection in "phytoG" "yart" "EXIT"; do
 	case $selection in
@@ -14,13 +15,8 @@ select selection in "phytoG" "yart" "EXIT"; do
 			MCRruntimeVer="R2012a"
 			MCRuzipP="$MCRdownP/MATLAB/MATLAB_Compiler_Runtime_$MCRruntimeVer";
 			break;;
-		yart ) echo 'yart'; break;;
-			MCRver="v717";
-			echo $MCRver
-			MRCticN="HlB1NJlWX8f8mqJ";
-			MCRdownP="/opt/imagePhenomics/common/";
-			MCRruntimeVer="R2012a"
-			MCRuzipP="$MCRdownP/MATLAB/MATLAB_Compiler_Runtime_$MCRruntimeVer/";
+		yart ) echo 'yart'; exit;;
+
 		EXIT ) echo 'Now exiting'; exit;;
 	esac
 done
@@ -34,4 +30,13 @@ sudo ./sub_phytoMorph.sh $progName $REPO $MCRver $MRCticN $mainP $MCRdownP $MCRr
 echo "End run "
 
 
+=======
+echo "Download started"
+wget -O sub_phytoMorph.sh https://bitbucket.org/leeatuw/repository_experiment/raw/master/sub_phytoMorph.sh
+echo "Download ended"
+echo "shell started"
+sudo chmod +x sub_phytoMorph.sh
+sudo ./sub_phytoMorph.sh
+echo "shell ended"
+>>>>>>> 41a2eb3790c580e405ae5d0326eb4f449f4f57f7
 
