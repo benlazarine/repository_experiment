@@ -1,4 +1,5 @@
 #!/bin/bash
+<<<<<<< HEAD
 echo "Which program do you want to configure or EXIT?"
 select selection in "phytoG" "yart" "EXIT"; do
 	case $selection in
