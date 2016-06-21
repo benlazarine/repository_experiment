@@ -12,7 +12,16 @@ select selection in "phytoG" "yart" "EXIT"; do
 			MCRruntimeVer="R2012a"
 			MCRuzipP="$MCRdownP/MATLAB/MATLAB_Compiler_Runtime_$MCRruntimeVer";
 			break;;
-		yart ) echo 'yart'; exit;;
+		yart ) 
+			progName="mainTrace_GUI";
+			REPO="https://bitbucket.org/leeatuw/repository_experiment/raw/Jun202016";
+			MCRver="v717";
+			MRCticN="HlB1NJlWX8f8mqJ";
+			mainP="/opt/imagePhenomics";
+			MCRdownP=$mainP"/common"
+			MCRruntimeVer="R2012a"
+			MCRuzipP="$MCRdownP/MATLAB/MATLAB_Compiler_Runtime_$MCRruntimeVer";
+			break;;
 
 		EXIT ) echo 'Now exiting'; exit;;
 	esac
