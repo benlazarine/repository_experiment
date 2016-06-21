@@ -5,9 +5,7 @@ select selection in "phytoG" "yart" "EXIT"; do
 		phytoG )
 			progName="phytoG"; 
 			REPO="https://bitbucket.org/leeatuw/repository_experiment/raw/Jun202016";
-			echo $progName
 			MCRver="v717";
-			echo $MCRver
 			MRCticN="HlB1NJlWX8f8mqJ";
 			mainP="/opt/imagePhenomics";
 			MCRdownP=$mainP"/common"
@@ -27,5 +25,6 @@ echo "Start run "
 sudo chmod +x sub_phytoMorph.sh
 sudo ./sub_phytoMorph.sh $progName $REPO $MCRver $MRCticN $mainP $MCRdownP $MCRruntimeVer $MCRuzipP
 echo "End run "
+
 
 
