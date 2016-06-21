@@ -14,12 +14,12 @@ wget -O iPlant_ver0 $1/iPlant_ver0
 echo "Done download: iPlant_ver0"
 ################################################################################################################
 ################################################################################################################
-echo "Create directory for phytoG"
+echo "Create directory for $2"
 mkdir -p $3/$2/
-echo "Start download: phytoG"
+echo "Start download: $2"
 wget -O $3/$2/$2 $1/$2
 sudo chmod +x $3/$2/$2
-echo "Done download: phytoG"
+echo "Done download: $2"
 ################################################################################################################
 ################################################################################################################
 echo "Start download: launch.sh"
@@ -27,10 +27,10 @@ wget -O launch.sh $1/launch.sh
 echo "Done download: launch.sh"
 ################################################################################################################
 ################################################################################################################
-echo "Start download: run_phytoG.sh "
+echo "Start download: run_$2.sh "
 wget -O $3/$2/run_$2.sh $1/run_$2.sh
 sudo chmod +x $3/$2/run_$2.sh  
-echo "Done download: run_phytoG.sh "
+echo "Done download: run_$2.sh "
 ################################################################################################################
 ################################################################################################################
 wget -O icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
