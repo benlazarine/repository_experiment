@@ -37,5 +37,5 @@ echo "End run: envConfig_phytoMorph.sh"
 # $5: MCR path
 echo "Start run: shell for compile"
 sudo chmod +x launch.sh
-./launch.sh $1 $5 $3 $7 $6 
+./launch.sh $1 $5 $3 $8
 echo "Done run: shell for compile"
