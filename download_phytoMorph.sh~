@@ -37,7 +37,7 @@ echo "Done download: run_$2.sh "
 echo "Start download: $2.desktop "
 wget -O $2.desktop $1/$2.desktop
 sudo mv $2.desktop ~/Desktop/
-sudo chmod +x ~/Desktop/$2.desktop  
+sudo chmod +x /Desktop/$2.desktop  
 echo "Done download: $2.desktop "
 ################################################################################################################
 ################################################################################################################
