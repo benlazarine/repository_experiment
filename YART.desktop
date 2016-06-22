@@ -1,3 +1,4 @@
+
 [Desktop Entry]
 Encoding=UTF-8
 Name=YART
@@ -5,3 +6,4 @@ Comment=Download, install, update and run YART
 Exec=gnome-terminal -e /home/phytoMorph/GUIYART.sh
 Icon=/home/phytoMorph/phytoG.png
 Type=Application
+Name[en_US]=mainTrace_GUI
