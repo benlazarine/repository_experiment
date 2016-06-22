@@ -19,17 +19,32 @@ case $1 in
 				echo "Done download: $2"
 			fi
 			break;;
-		-d ) 
-			if [ -d "$3/$2" ]
-			then
-				echo "$2 found. Skip unzip $2"
-			else
-				echo "$2 not found."
-				echo "start unzip: $2.zip"
-				mkdir -p $3/
-				sudo unzip -o -q $4/$2.zip -d $3/
-				echo "Done unzip: $2.zip"
-			fi
+		-d )
+			case $5 in
+					.zip )
+						if [ -d "$3/$2" ]
+						then
+							echo "$2 found. Skip unzip $2"
+						else
+							echo "$2 not found."
+							echo "start unzip: $2.zip"
+							mkdir -p $3/
+						sudo unzip -o -q $4/$2.zip -d $3/
+						echo "Done unzip: $2.zip"
+						fi
+						break;;
+					.tar.bz2 )
+						if [ -d "$3/$2" ]
+						then
+							echo "$2 found. Skip untar $2"
+						else
+							echo "$2 not found."
+							echo "start untar: $2.tar.bz2"
+							mkdir -p $3/
+						sudo tar xjf $4/$2.tar.bz2 -C $3/
+						echo "Done unzip: $2.tar.bz2"
+						fi
+						break;;
 			break;;
 
 		EXIT ) echo 'Now exiting'; exit;;

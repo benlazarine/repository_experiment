@@ -14,11 +14,13 @@
 			#break;;
 
 
-myMCRZip="$3/$1.zip"
+
 
 ./ifExist.sh '-f' $1 $3 $2 'zip'
 ./ifExist.sh '-d' $1 "$4/MATLAB_Compiler_Runtime/" $3
+
 '
+myMCRZip="$3/$1.zip"
 if [ -f "$myMCRZip" ]
 then
 	echo "$myMCRZip found. Skip download $myMCRZip"

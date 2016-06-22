@@ -11,11 +11,13 @@ echo "Done download: envConfig_phytoMorph.sh"
 ################################################################################################################
 ################################################################################################################
 ################################################################################################################
+'
 # download environment configuration script
 echo "Start download: ifExist.sh"
 sudo wget -O $4/ifExist.sh $1/ifExist.sh
 sudo chmod +x ifExist.sh
 echo "Done download: ifExist.sh"
+'
 ################################################################################################################
 ################################################################################################################
 echo "Start download: iPlant_ver0"
@@ -62,9 +64,15 @@ sudo chmod +x $4/phytoG.png
 echo "Done download: phytoG.png "
 ################################################################################################################
 ################################################################################################################
+'
+sudo $4/ifExist.sh '-d' 'icommands.x86_64.tar.bz2' '' '/usr/sbin'
+sudo $4/ifExist.sh '-f' 'irodsFs' '/usr/sbin' 
+'
+sudo mv /usr/sbin/icommands/icd /usr/sbin/
 sudo wget -O icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
 sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
 sudo mv /usr/sbin/icommands/icd /usr/sbin/ 
+
 sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
 sudo chmod +x /usr/sbin/irodsFs
 

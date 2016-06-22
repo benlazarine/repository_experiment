@@ -13,7 +13,7 @@ echo "Done download: envConfig_phytoMorph.sh"
 ################################################################################################################
 # download environment configuration script
 echo "Start download: ifExist.sh"
-sudo wget -O $4/envConfig_phytoMorph.sh $1/ifExist.sh
+sudo wget -O $4/ifExist.sh $1/ifExist.sh
 sudo chmod +x ifExist.sh
 echo "Done download: ifExist.sh"
 ################################################################################################################
@@ -62,6 +62,7 @@ sudo chmod +x $4/phytoG.png
 echo "Done download: phytoG.png "
 ################################################################################################################
 ################################################################################################################
+ifExist.sh '-f' 'icommands.x86_64.tar.bz2' 
 sudo wget -O icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
 sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
 sudo mv /usr/sbin/icommands/icd /usr/sbin/ 
