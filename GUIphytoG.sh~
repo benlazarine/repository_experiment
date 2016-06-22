@@ -9,9 +9,6 @@ MCRdownP=$mainP"/common"
 MCRruntimeVer="R2012a"
 MCRuzipP="$MCRdownP/MATLAB/MATLAB_Compiler_Runtime_$MCRruntimeVer";
 
-sudo mkdir -p "/home/phytoMorph"
-sudo cd "/home/phytoMorph"
-echo "Start download"
 echo "Start download"
 wget -O sub_phytoMorph.sh $REPO/sub_phytoMorph.sh
 echo "End download"

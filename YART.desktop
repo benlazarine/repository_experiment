@@ -2,6 +2,6 @@
 Encoding=UTF-8
 Name=YART
 Comment=Download, install, update and run YART
-Exec=gnome-terminal -e /usr/sbin/GUIYART.sh
-Icon=/usr/sbin/phytoG.png
+Exec=gnome-terminal -e /home/phytoMorph/GUIYART.sh
+Icon=/home/phytoMorph/phytoG.png
 Type=Application
