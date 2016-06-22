@@ -30,7 +30,7 @@ done
 instPath="/home/phytoMorph"
 sudo mkdir -p $instPath/
 echo "Start download"
-wget -O $instPath/sub_phytoMorph.sh $REPO/sub_phytoMorph.sh
+sudo wget -O $instPath/sub_phytoMorph.sh $REPO/sub_phytoMorph.sh
 echo "End download"
 echo "Start run "
 sudo chmod +x sub_phytoMorph.sh

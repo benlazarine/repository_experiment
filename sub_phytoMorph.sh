@@ -13,10 +13,10 @@
 ################################################################################################################
 # download environment configuration script
 echo "Start download: envConfig_phytoMorph.sh"
-wget -O download_phytoMorph.sh $2/download_phytoMorph.sh
+sudo wget -O $9/download_phytoMorph.sh $2/download_phytoMorph.sh
 echo "Done download: envConfig_phytoMorph.sh"
 sudo chmod +x $9/download_phytoMorph.sh
-$9/download_phytoMorph.sh $2 $1 $5 $9
+sudo $9/download_phytoMorph.sh $2 $1 $5 $9
 ################################################################################################################
 ################################################################################################################
 # $1: MCR version: MCRver
@@ -27,7 +27,7 @@ $9/download_phytoMorph.sh $2 $1 $5 $9
 # run environment configuration script
 echo "Start run: envConfig_phytoMorph.sh"
 sudo chmod +x $9/envConfig_phytoMorph.sh
-$9/envConfig_phytoMorph.sh $3 $4 $6 $8 $7 
+sudo $9/envConfig_phytoMorph.sh $3 $4 $6 $8 $7 
 echo "End run: envConfig_phytoMorph.sh"
 ################################################################################################################
 ################################################################################################################
@@ -38,5 +38,5 @@ echo "End run: envConfig_phytoMorph.sh"
 # $5: MCR path
 echo "Start run: shell for compile"
 sudo chmod +x $9/launch.sh
-$9/launch.sh $1 $5 $3 $8
+sudo $9/launch.sh $1 $5 $3 $8
 echo "Done run: shell for compile"

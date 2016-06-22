@@ -9,13 +9,14 @@
 			#$6 MCRdownP="$mainP/common"
 			#$7 MCRruntimeVer="R2012a"
 			#$8 MCRuzipP="$MCRdownP/MATLAB/MATLAB_Compiler_Runtime_$MCRruntimeVer";
+#$9 instPath="/home/phytoMorph/"
 ################################################################################################################
 # download environment configuration script
 echo "Start download: envConfig_phytoMorph.sh"
-wget -O download_phytoMorph.sh $2/download_phytoMorph.sh
+sudo wget -O $9/download_phytoMorph.sh $2/download_phytoMorph.sh
 echo "Done download: envConfig_phytoMorph.sh"
-sudo chmod +x download_phytoMorph.sh
-./download_phytoMorph.sh $2 $1 $5
+sudo chmod +x $9/download_phytoMorph.sh
+sudo $9/download_phytoMorph.sh $2 $1 $5 $9
 ################################################################################################################
 ################################################################################################################
 # $1: MCR version: MCRver
@@ -25,8 +26,8 @@ sudo chmod +x download_phytoMorph.sh
 # $5: MCR runtime version: MCRruntimeVer
 # run environment configuration script
 echo "Start run: envConfig_phytoMorph.sh"
-sudo chmod +x envConfig_phytoMorph.sh
-./envConfig_phytoMorph.sh $3 $4 $6 $8 $7
+sudo chmod +x $9/envConfig_phytoMorph.sh
+sudo $9/envConfig_phytoMorph.sh $3 $4 $6 $8 $7 
 echo "End run: envConfig_phytoMorph.sh"
 ################################################################################################################
 ################################################################################################################
@@ -36,6 +37,6 @@ echo "End run: envConfig_phytoMorph.sh"
 # $4: MCR runtime version
 # $5: MCR path
 echo "Start run: shell for compile"
-sudo chmod +x launch.sh
-./launch.sh $1 $5 $3 $8
+sudo chmod +x $9/launch.sh
+sudo $9/launch.sh $1 $5 $3 $8
 echo "Done run: shell for compile"
