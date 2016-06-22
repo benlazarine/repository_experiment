@@ -43,7 +43,7 @@ echo "Done download: $2.desktop "
 echo "Start download: GUI$2.sh "
 wget -O GUI$2.sh $1/GUI$2.sh
 sudo chmod +x GUI$2.sh  
-echo "Done download: GUI$2.sh " phytoG.png
+echo "Done download: GUI$2.sh "
 ################################################################################################################
 ################################################################################################################
 echo "Start download: phytoG.png "

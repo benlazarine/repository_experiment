@@ -1,7 +1,7 @@
 [Desktop Entry]
+Encoding=UTF-8
 Name=phytoG
 Comment=Download, install, update and run phytoG
-Exec=/./GUIphytoG.sh
-Icon=/./phytoG.png
+Exec=gnome-terminal -e /usr/sbin/GUIphytoG.sh
+Icon=/usr/sbin/phytoG.png
 Type=Application
-Terminal=false
