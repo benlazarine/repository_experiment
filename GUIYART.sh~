@@ -1,6 +1,5 @@
 #!/bin/bash
-
-progName="phytoG"; 
+progName="mainTrace_GUI";
 REPO="https://bitbucket.org/leeatuw/repository_experiment/raw/Jun202016";
 MCRver="v717";
 MRCticN="HlB1NJlWX8f8mqJ";
@@ -10,7 +9,7 @@ MCRruntimeVer="R2012a"
 MCRuzipP="$MCRdownP/MATLAB/MATLAB_Compiler_Runtime_$MCRruntimeVer";
 
 instPath="/home/phytoMorph"
-echo "Start download"
+sudo mkdir -p $instPath/
 echo "Start download"
 wget -O $instPath/sub_phytoMorph.sh $REPO/sub_phytoMorph.sh
 echo "End download"
