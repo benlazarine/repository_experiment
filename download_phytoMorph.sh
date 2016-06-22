@@ -77,7 +77,7 @@ sudo chmod +x /usr/sbin/irodsFs
 
 
 myMCRtar="icommands.x86_64.tar.bz2"
-if [ -f "$myMCRZtar" ]
+if [ -f "$myMCRtar" ]
 then
 	echo "$myMCRtar found. Skip download $myMCRtar"
 	sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
