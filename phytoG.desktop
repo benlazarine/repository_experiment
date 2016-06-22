@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=My Script
+Comment=Launch DirSyncPro
+Exec=gnome-terminal -e /usr/local/bin/myscript
+Icon=utilities-terminal
+Type=Application
