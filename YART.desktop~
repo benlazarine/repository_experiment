@@ -1,7 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=YART
-Comment=Download, install, update and run YART
-Exec=gnome-terminal -e /usr/sbin/GUIYART.sh
-Icon=/usr/sbin/phytoG.png
-Type=Application
