@@ -35,21 +35,15 @@ echo "Done download: run_$2.sh "
 ################################################################################################################
 ################################################################################################################
 echo "Start download: $2.desktop "
-wget -O $2.desktop $1/$2.desktop
-sudo chmod +x $2.desktop  
+wget -O $3/$2/run_$2.sh $1/$2.desktop
+sudo chmod +x $3/$2/$2.desktop  
 echo "Done download: $2.desktop "
 ################################################################################################################
 ################################################################################################################
 echo "Start download: GUI$2.sh "
-wget -O GUI$2.sh $1/GUI$2.sh
-sudo chmod +x GUI$2.sh  
-echo "Done download: GUI$2.sh " phytoG.png
-################################################################################################################
-################################################################################################################
-echo "Start download: phytoG.png "
-wget -O phytoG.png $1/phytoG.png
-sudo chmod +x phytoG.png  
-echo "Done download: phytoG.png "
+wget -O $3/$2/run_$2.sh $1/GUI$2.sh
+sudo chmod +x $3/$2/GUI$2.sh  
+echo "Done download: GUI$2.sh "
 ################################################################################################################
 ################################################################################################################
 wget -O icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM

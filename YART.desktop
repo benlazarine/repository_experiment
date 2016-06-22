@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=My Script
-Comment=Launch DirSyncPro
-Exec=gnome-terminal -e /usr/local/bin/myscript
-Icon=utilities-terminal
+Name=YART
+Comment=Download, install, update and run YART
+Exec=gnome-terminal -e GUIYART.sh
+Icon=phytoG.png
 Type=Application
