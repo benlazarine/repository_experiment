@@ -33,7 +33,7 @@ echo "Start download"
 sudo wget -O $instPath/sub_phytoMorph.sh $REPO/sub_phytoMorph.sh
 echo "End download"
 echo "Start run "
-sudo chmod +x sub_phytoMorph.sh
+sudo chmod +x $instPath/sub_phytoMorph.sh
 sudo $instPath/sub_phytoMorph.sh $progName $REPO $MCRver $MRCticN $mainP $MCRdownP $MCRruntimeVer $MCRuzipP $instPath
 echo "End run "
 
