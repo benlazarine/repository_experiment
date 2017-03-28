@@ -4,7 +4,7 @@ select selection in "phytoG" "yart" "EXIT"; do
 	case $selection in
 		phytoG )
 			progName="phytoG"; 
-			REPO="https://bitbucket.org/leeatuw/repository_experiment/raw/Jun202016";
+			REPO="https://github.com/cyverse/repository_experiment/blob/2017_03_28";
 			MCRver="v717";
 			MRCticN="HlB1NJlWX8f8mqJ";
 			mainP="/opt/imagePhenomics";
@@ -15,7 +15,7 @@ select selection in "phytoG" "yart" "EXIT"; do
 			break;;
 		yart ) 
 			progName="mainTrace_GUI";
-			REPO="https://bitbucket.org/leeatuw/repository_experiment/raw/Jun202016";
+			REPO="https://github.com/cyverse/repository_experiment/blob/2017_03_28";
 			MCRver="v717";
 			MRCticN="HlB1NJlWX8f8mqJ";
 			mainP="/opt/imagePhenomics";
@@ -36,6 +36,3 @@ echo "Start run "
 sudo chmod +x $instPath/sub_phytoMorph.sh
 sudo $instPath/sub_phytoMorph.sh $progName $REPO $MCRver $MRCticN $mainP $MCRdownP $MCRruntimeVer $MCRuzipP $instPath
 echo "End run "
-
-
-
