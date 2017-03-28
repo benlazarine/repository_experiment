@@ -15,11 +15,13 @@
 
 
 
-'
-./ifExist.sh '-f' $1 $3 $2 'zip'
-./ifExist.sh '-d' $1 "$4/MATLAB_Compiler_Runtime/" $3
 
-'
+echo "NOTE: commented out the following lines since it wasn't being used anyway, and was generating an error"
+echo "./ifExist.sh '-f' $1 $3 $2 'zip'"
+echo "./ifExist.sh '-d' $1 \"$4/MATLAB_Compiler_Runtime/\" $3"
+echo '- finished NOTE'
+
+
 myMCRZip="$3/$1.zip"
 if [ -f "$myMCRZip" ]
 then

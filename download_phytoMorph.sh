@@ -66,14 +66,13 @@ echo "Done download: phytoG.png "
 ################################################################################################################
 ################################################################################################################
 
-'
-sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
-sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
-sudo mv /usr/sbin/icommands/icd /usr/sbin/ 
+echo "NOTE: these lines were explicitly commented out since they were not properly commented out -EJS"
+echo "sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM"
+echo "sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/"
+echo "sudo mv /usr/sbin/icommands/icd /usr/sbin/"
 
-sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
-sudo chmod +x /usr/sbin/irodsFs
-'
+echo "sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun"
+echo "sudo chmod +x /usr/sbin/irodsFs"
 
 
 ils_exists=$(which ils)
@@ -96,7 +95,7 @@ else
 fi
 
 irodsfs_exists=$(which irodsFs)
-if [$? != 0 ]
+if [ $? != 0 ]
 then
 	myFs="/usr/sbin/irodsFs"
 	if [ -f "$myFs" ]
@@ -111,5 +110,3 @@ then
 else
 	echo "INFO: irodsFs was found in "$(dirname $irodsfs_exists)"; no need to download"
 fi
-
-
