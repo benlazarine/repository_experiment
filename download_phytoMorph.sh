@@ -11,18 +11,19 @@ echo "Done download: envConfig_phytoMorph.sh"
 ################################################################################################################
 ################################################################################################################
 ################################################################################################################
-'
-# download environment configuration script
-echo "Start download: ifExist.sh"
-sudo wget -O $4/ifExist.sh $1/ifExist.sh
-sudo chmod +x ifExist.sh
-echo "Done download: ifExist.sh"
-'
+
+echo "Note: I removed the following since I'm not sure what's the purpose of these steps - EJS"
+echo "# download environment configuration script"
+echo 'echo "Start download: ifExist.sh"'
+echo 'sudo wget -O $4/ifExist.sh $1/ifExist.sh'
+echo 'sudo chmod +x ifExist.sh'
+echo 'echo "Done download: ifExist.sh"'
+
 ################################################################################################################
 ################################################################################################################
 echo "Start download: iPlant_ver0"
 sudo wget -O $4/iPlant_ver0 $1/iPlant_ver0
-sudo chmod +x $1/iPlant_ver0
+sudo chmod +x $4/iPlant_ver0
 echo "Done download: iPlant_ver0"
 ################################################################################################################
 ################################################################################################################
