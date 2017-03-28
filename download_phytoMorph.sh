@@ -76,28 +76,40 @@ sudo chmod +x /usr/sbin/irodsFs
 '
 
 
-
-myMCRtar="icommands.x86_64.tar.bz2"
-if [ -f "$myMCRtar" ]
-then
-	echo "$myMCRtar found. Skip download $myMCRtar"
-	sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
-	sudo mv /usr/sbin/icommands/icd /usr/sbin/
+ils_exists=$(which ils)
+if [ $? != 0 ]
+then 
+	myMCRtar="icommands.x86_64.tar.bz2"
+	if [ -f "$myMCRtar" ]
+	then
+		echo "$myMCRtar found. Skip download $myMCRtar"
+		sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
+		sudo mv /usr/sbin/icommands/icd /usr/sbin/
+	else
+		echo "$myMCRtar not found."
+		sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
+		sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
+		sudo mv /usr/sbin/icommands/icd /usr/sbin/
+	fi
 else
-	echo "$myMCRtar not found."
-	sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
-	sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
-	sudo mv /usr/sbin/icommands/icd /usr/sbin/
+	echo "INFO: icommands was found in "$(dirname $ils_exists)"; no need to download"
 fi
 
-myFs="/usr/sbin/irodsFs"
-if [ -f "$myFs" ]
+irodsfs_exists=$(which irodsFs)
+if [$? != 0 ]
 then
-	echo "$myFs found. Skip download $myFs"
-	sudo chmod +x /usr/sbin/irodsFs
+	myFs="/usr/sbin/irodsFs"
+	if [ -f "$myFs" ]
+	then
+		echo "$myFs found. Skip download $myFs"
+		sudo chmod +x /usr/sbin/irodsFs
+	else
+		echo "$myFs not found."
+		sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
+		sudo chmod +x /usr/sbin/irodsFs
+	fi
 else
-	echo "$myFs not found."
-	sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
-	sudo chmod +x /usr/sbin/irodsFs
+	echo "INFO: irodsFs was found in "$(dirname $irodsfs_exists)"; no need to download"
 fi
+
 
