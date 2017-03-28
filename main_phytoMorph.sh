@@ -4,7 +4,7 @@ select selection in "phytoG" "yart" "EXIT"; do
 	case $selection in
 		phytoG )
 			progName="phytoG"; 
-			REPO="https://github.com/cyverse/repository_experiment/blob/2017_03_28";
+			REPO="https://raw.githubusercontent.com/cyverse/repository_experiment/2017_03_28";
 			MCRver="v717";
 			MRCticN="HlB1NJlWX8f8mqJ";
 			mainP="/opt/imagePhenomics";
@@ -15,7 +15,7 @@ select selection in "phytoG" "yart" "EXIT"; do
 			break;;
 		yart ) 
 			progName="mainTrace_GUI";
-			REPO="https://github.com/cyverse/repository_experiment/blob/2017_03_28";
+			REPO="https://raw.githubusercontent.com/cyverse/repository_experiment/2017_03_28";
 			MCRver="v717";
 			MRCticN="HlB1NJlWX8f8mqJ";
 			mainP="/opt/imagePhenomics";
