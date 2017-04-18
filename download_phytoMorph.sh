@@ -65,30 +65,20 @@ echo "Done download: phytoG.png "
 ################################################################################################################
 ################################################################################################################
 
-echo "NOTE: these lines were explicitly commented out since they were not properly commented out -EJS"
-echo "sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM"
-echo "sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/"
-echo "sudo mv /usr/sbin/icommands/icd /usr/sbin/"
+# "NOTE: these lines were explicitly commented out since they were not properly commented out -EJS"
+#sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
+#sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
+#sudo mv /usr/sbin/icommands/icd /usr/sbin/
 
-echo "sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun"
-echo "sudo chmod +x /usr/sbin/irodsFs"
+#sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
+#sudo chmod +x /usr/sbin/irodsFs
 
 
 ils_exists=$(which ils)
 if [ $? != 0 ]
 then 
-	myMCRtar="icommands.x86_64.tar.bz2"
-	if [ -f "$myMCRtar" ]
-	then
-		echo "$myMCRtar found. Skip download $myMCRtar"
-		sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
-		sudo mv /usr/sbin/icommands/icd /usr/sbin/
-	else
-		echo "$myMCRtar not found."
-		sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
-		sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
-		sudo mv /usr/sbin/icommands/icd /usr/sbin/
-	fi
+	echo "ERROR: IF YOU SEE THIS MESSAGE ICOMMANDS IS NOT INSTALLED, CONTACT MAINTAINER"
+	exit 1
 else
 	echo "INFO: icommands was found in "$(dirname $ils_exists)"; no need to download"
 fi
@@ -96,16 +86,8 @@ fi
 irodsfs_exists=$(which irodsFs)
 if [ $? != 0 ]
 then
-	myFs="/usr/sbin/irodsFs"
-	if [ -f "$myFs" ]
-	then
-		echo "$myFs found. Skip download $myFs"
-		sudo chmod +x /usr/sbin/irodsFs
-	else
-		echo "$myFs not found."
-		sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
-		sudo chmod +x /usr/sbin/irodsFs
-	fi
+	echo "ERROR: IF YOU SEE THIS MESSAGE IRODSFS IS NOT INSTALLED, CONTACT MAINTAINER"
+	exit 1
 else
 	echo "INFO: irodsFs was found in "$(dirname $irodsfs_exists)"; no need to download"
 fi
