@@ -45,6 +45,7 @@ case $1 in
 					echo "Done unzip: $2.tar.bz2"
 				fi
 				;;
+		esac
 		;;
 
 	EXIT ) echo 'Now exiting'; exit ;;
