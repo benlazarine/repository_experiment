@@ -15,7 +15,7 @@ echo "Done download: envConfig_phytoMorph.sh"
 # download environment configuration script
 echo "Start download: ifExist.sh"
 sudo wget -O $4/ifExist.sh $1/ifExist.sh
-sudo chmod +x ifExist.sh
+sudo chmod +x $4/ifExist.sh
 echo "Done download: ifExist.sh"
 
 ################################################################################################################
