@@ -30,7 +30,7 @@ else
 	echo "Create directory for MCR-$1.zip"
 	mkdir -p $3/
 	echo "Start download: MCR-$1.zip"
-	wget -O $3/$1.zip http://de.cyverse.org/dl/d/HlB1NJlWX8f8mqJ/$1.zip
+	wget -O $3/$1.zip http://de.cyverse.org/dl/d/9FC9295E-BF78-49E1-B111-EBDA83F090C3/$1.zip
 	echo "Done download: MCR-$1.zip"
 fi
 ################################################################################################################
