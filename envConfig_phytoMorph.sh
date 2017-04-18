@@ -17,7 +17,10 @@
 
 installDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo "DEBUG: ${installDir}/ifExist.sh '-f' $1 $3 $2 'zip'"
 ${installDir}/ifExist.sh '-f' $1 $3 $2 'zip'
+
+echo "DEBUG: ${installDir}/ifExist.sh '-d' $1 \"$4/MATLAB_Compiler_Runtime/\" $3"
 ${installDir}/ifExist.sh '-d' $1 \"$4/MATLAB_Compiler_Runtime/\" $3
 
 
