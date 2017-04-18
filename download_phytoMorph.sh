@@ -13,11 +13,17 @@ echo "Done download: envConfig_phytoMorph.sh"
 ################################################################################################################
 
 echo "Note: I removed the following since I'm not sure what's the purpose of these steps - EJS"
+# download environment configuration script
+#echo "Start download: ifExist.sh"
+#sudo wget -O $4/ifExist.sh $1/ifExist.sh
+#sudo chmod +x ifExist.sh
+#echo "Done download: ifExist.sh"
+
 echo "EJS # download environment configuration script"
-echo 'EJS echo "Start download: ifExist.sh"'
-echo 'EJS sudo wget -O $4/ifExist.sh $1/ifExist.sh'
-echo 'EJS sudo chmod +x ifExist.sh'
-echo 'EJS echo "Done download: ifExist.sh"'
+echo "EJS echo \"Start download: ifExist.sh\""
+echo "EJS sudo wget -O $4/ifExist.sh $1/ifExist.sh"
+echo "EJS sudo chmod +x ifExist.sh"
+echo "EJS echo \"Done download: ifExist.sh\""
 
 ################################################################################################################
 ################################################################################################################
