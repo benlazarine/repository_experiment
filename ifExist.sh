@@ -15,7 +15,7 @@ case $1 in
 			echo "Create directory for $2"
 			mkdir -p $3/
 			echo "Start download: $2"
-			wget -O $3/$2.zip http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/$2.zip?ticket=$4
+			wget -O $3/$2.zip http://de.cyverse.org/dl/d/9FC9295E-BF78-49E1-B111-EBDA83F090C3/$2.zip
 			echo "Done download: $2"
 		fi
 		;;
