@@ -31,7 +31,7 @@ else
 	echo "Create directory for MCR-$1.zip"
 	mkdir -p $3/
 	echo "Start download: MCR-$1.zip"
-	wget -O $3/$1.zip http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/$1.zip?ticket=$2
+	wget -O $3/$1.zip http://de.cyverse.org/dl/d/HlB1NJlWX8f8mqJ/$1.zip
 	echo "Done download: MCR-$1.zip"
 fi
 ################################################################################################################
