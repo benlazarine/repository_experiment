@@ -107,5 +107,14 @@ then
 	echo "ERROR: IF YOU SEE THIS MESSAGE IRODSFS IS NOT INSTALLED, CONTACT MAINTAINER"
 	exit 1
 else
+	if [ ! -f /usr/sbin/irodsFs ]
+	then
+		ln -s /usr/bin/irodsFs /usr/sbin/irodsFs
+	else if [ ! -s /usr/sbin/irodsFs ]
+	then
+		rm -f /usr/sbin/irodsFs
+		ln -s /usr/bin/irodsFs /usr/sbin/irodsFs
+	fi
+
 	echo "INFO: irodsFs was found in "$(dirname $irodsfs_exists)"; no need to download"
 fi
