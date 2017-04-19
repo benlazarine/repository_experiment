@@ -84,7 +84,7 @@ then
 	fi
 	echo "... now extracting. You should get coffee. This may take awhile."
 	tar -C ${HOME}/Desktop -xjf ${3}/common/image_processing_toolkit_desktop.tar.bz2
-	sudo chmod -R a+rwx Image\ Processing\ Toolkit sampleData
+	sudo chmod -R a+rwx ${HOME}/Desktop/Image\ Processing\ Toolkit ${HOME}/Desktop/sampleData
 fi
 echo "Done installing sample data and desktop icons"
 
