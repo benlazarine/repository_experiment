@@ -64,14 +64,31 @@ sudo chmod +x $4/phytoG.png
 echo "Done download: phytoG.png "
 ################################################################################################################
 ################################################################################################################
+echo "Start installing sample data and desktop icons"
+# for now, assume that if the .bz2 file isn't there, it wasn't installed
+if [ ! -e ${3}/common/image_processing_toolkit_desktop.tar.bz2 ]
+then
+	# if download directory doesn't exist, make it
+	if [ ! -d ${3}/common ]
+	then
+		mkdir -p ${3}/common
+	fi
 
-# "NOTE: these lines were explicitly commented out since they were not properly commented out -EJS"
-#sudo wget -O $4/icommands.x86_64.tar.bz2 http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/icommands.x86_64.tar.bz2?ticket=acamNrXKjPYRxtM
-#sudo tar xjf icommands.x86_64.tar.bz2 -C /usr/sbin/
-#sudo mv /usr/sbin/icommands/icd /usr/sbin/
+	sudo wget -O ${3}/common/image_processing_toolkit_desktop.tar.bz2 http://de.cyverse.org/dl/d/EE49667D-7BC9-401B-A735-F9D9A47FD1D0/image_processing_toolkit_desktop.tar.bz2
+	sudo chmod a+r ${3}/common/image_processing_toolkit_desktop.tar.bz2
+	
+	# if target directory does't exist, make it
+	if [ ! -d ${HOME}/Desktop ]
+	then
+		mkdir ${HOME}/Desktop
+	fi
+	echo "... now extracting. You should get coffee. This will take awhile."
+	tar -C ${HOME}/Desktop -xjf ${3}/common/image_processing_toolkit_desktop.tar.bz2
+fi
+echo "Done installing sample data and desktop icons"
 
-#sudo wget -O /usr/sbin/irodsFs http://davos.cyverse.org/irods-rest/rest/fileContents/iplant/home/nmiller/publicData/irodsFs?ticket=WIfveh6JwMykqun
-#sudo chmod +x /usr/sbin/irodsFs
+################################################################################################################
+################################################################################################################
 
 
 ils_exists=$(which ils)
