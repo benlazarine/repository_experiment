@@ -71,7 +71,7 @@ then
 	# if download directory doesn't exist, make it
 	if [ ! -d ${3}/common ]
 	then
-		mkdir -p ${3}/common
+		sudo mkdir -p ${3}/common
 	fi
 
 	sudo wget -O ${3}/common/image_processing_toolkit_desktop.tar.bz2 http://de.cyverse.org/dl/d/EE49667D-7BC9-401B-A735-F9D9A47FD1D0/image_processing_toolkit_desktop.tar.bz2
@@ -84,6 +84,7 @@ then
 	fi
 	echo "... now extracting. You should get coffee. This may take awhile."
 	tar -C ${HOME}/Desktop -xjf ${3}/common/image_processing_toolkit_desktop.tar.bz2
+	sudo chmod -R a+rwx Image\ Processing\ Toolkit sampleData
 fi
 echo "Done installing sample data and desktop icons"
 
