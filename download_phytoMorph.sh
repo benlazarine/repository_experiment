@@ -82,7 +82,7 @@ then
 	then
 		mkdir ${HOME}/Desktop
 	fi
-	echo "... now extracting. You should get coffee. This will take awhile."
+	echo "... now extracting. You should get coffee. This may take awhile."
 	tar -C ${HOME}/Desktop -xjf ${3}/common/image_processing_toolkit_desktop.tar.bz2
 fi
 echo "Done installing sample data and desktop icons"
